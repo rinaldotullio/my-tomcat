@@ -1,4 +1,6 @@
-FROM fedora/tools
+FROM debian:stable
+RUN apt-get update && apt-get install -y --force-yes apache2
 
-############################ PREREQUIREMENTS PACKAGE #############################
-RUN dnf install -y wget httpd php gcc glibc glibc-common gd gd-devel make net-snmp
+EXPOSE 80 443
+VOLUME ["/var/www", "/var/log/apache2", "/etc/apache2"]
+ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
