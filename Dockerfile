@@ -1,4 +1,4 @@
-FROM fedora/tools
+FROM fedora
 
 ############################ PREREQUIREMENTS PACKAGE #############################
 RUN dnf install -y wget httpd php gcc glibc glibc-common gd gd-devel make net-snmp
