@@ -9,4 +9,4 @@ EXPOSE 80
 ADD run-httpd.sh /run-httpd.sh
 RUN chmod 777 /run-httpd.sh
 
-CMD ["/run-httpd.sh"]
+ENTRYPOINT ["/run-httpd.sh"]
