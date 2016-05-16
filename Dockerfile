@@ -1,7 +1,6 @@
 FROM centos:latest
 
-RUN yum -y update && yum clean all
-RUN yum -y install httpd && yum clean all
+RUN yum -y install httpd 
 
 EXPOSE 80
 
