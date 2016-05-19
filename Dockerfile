@@ -9,3 +9,6 @@ ADD run-httpd.sh /run-httpd.sh
 RUN chmod 777 /run-httpd.sh
 
 ENTRYPOINT ["/run-httpd.sh"]
+
+
+ADD prova.html /
