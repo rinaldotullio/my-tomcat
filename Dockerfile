@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN yum -y install httpd 
+RUN yum -y install httpd perl
 
 EXPOSE 80
 
