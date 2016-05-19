@@ -10,5 +10,5 @@ RUN chmod 777 /run-httpd.sh
 
 ENTRYPOINT ["/run-httpd.sh"]
 
-
-ADD prova.html /
+WORKDIR /var/www/html
+ADD prova.html /prova.html
