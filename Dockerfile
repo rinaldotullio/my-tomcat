@@ -25,7 +25,7 @@ WORKDIR /opt/rh/apache-tomcat-7.0.69
 RUN chmod +x bin/*.sh
 
 #
-# DEPLLY dentro webapps
+# DEPLOY dentro webapps
 #
 #
 # ADD deploy.war /opt/rh/apache-tomcat-7.0.69/webapps/
