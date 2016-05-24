@@ -1,7 +1,5 @@
 FROM fedora
 #FROM registry.access.redhat.com/rhel7.1
-#CHANGE
-
 
 RUN dnf -y update && dnf clean all
 
@@ -23,16 +21,17 @@ RUN ls -la
 WORKDIR /opt/rh/apache-tomcat-7.0.69
 
 RUN chmod +x bin/*.sh
+RUN chmod -R 777 *
 
 #
 # DEPLOY dentro webapps
 #
-#
-# ADD deploy.war /opt/rh/apache-tomcat-7.0.69/webapps/
-#
+ADD sample.war /opt/rh/apache-tomcat-7.0.69/webapps/
 
 
 ENV JAVA_OPTS="-Djava.net.preferIPv4Stack=true"
+
+EXPOSE 8080
 
 ENTRYPOINT ["./bin/catalina.sh"]
 
